@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\workspace\dotnet\SignalR.Chat\SignalR.Chat.Server\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2024-03-06T22:59:26.5100591Z;True|2024-03-06T19:34:34.0066522-03:00;True|2024-03-06T19:30:55.6811559-03:00;True|2024-03-06T19:25:08.7630417-03:00;True|2024-03-06T19:16:24.1427022-03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

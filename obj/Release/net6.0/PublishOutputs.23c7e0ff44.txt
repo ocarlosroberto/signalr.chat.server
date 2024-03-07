@@ -1,0 +1,7 @@
+C:\workspace\dotnet\SignalR.Chat\SignalR.Chat.Server\obj\Release\net6.0\PubTmp\Out\SignalR.Chat.Server.exe
+C:\workspace\dotnet\SignalR.Chat\SignalR.Chat.Server\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+C:\workspace\dotnet\SignalR.Chat\SignalR.Chat.Server\obj\Release\net6.0\PubTmp\Out\appsettings.json
+C:\workspace\dotnet\SignalR.Chat\SignalR.Chat.Server\obj\Release\net6.0\PubTmp\Out\SignalR.Chat.Server.dll
+C:\workspace\dotnet\SignalR.Chat\SignalR.Chat.Server\obj\Release\net6.0\PubTmp\Out\SignalR.Chat.Server.deps.json
+C:\workspace\dotnet\SignalR.Chat\SignalR.Chat.Server\obj\Release\net6.0\PubTmp\Out\SignalR.Chat.Server.runtimeconfig.json
+C:\workspace\dotnet\SignalR.Chat\SignalR.Chat.Server\obj\Release\net6.0\PubTmp\Out\SignalR.Chat.Server.pdb
