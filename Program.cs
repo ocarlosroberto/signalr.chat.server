@@ -1,21 +1,22 @@
 using SignalR.Chat.Server.Hubs;
+using Microsoft.AspNetCore.Cors;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSignalR();
 builder.Services.AddRouting();
 
 builder.Services.AddCors(options => {
-    options.AddPolicy("All", policy => {
-        policy.AllowAnyHeader()
+    options.AddPolicy("CorsPolicy", policy => {
+        policy.WithHeaders("*")
                 .AllowAnyMethod()
-                .WithOrigins("https://ashy-smoke-0846a5f0f.5.azurestaticapps.net")
+                .WithOrigins("http://localhost:4200")
                 .AllowCredentials();
     });
 });
 
 var app = builder.Build();
 app.UseRouting();
-app.UseCors("All");
+app.UseCors("CorsPolicy");
 
 app.UseEndpoints(endpoints =>
 {
