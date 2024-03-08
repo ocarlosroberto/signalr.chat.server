@@ -1,4 +1,5 @@
 ﻿using System.Collections.Concurrent;
+using System.Net;
 using Microsoft.AspNetCore.SignalR;
 
 namespace SignalR.Chat.Server.Hubs
@@ -10,7 +11,7 @@ namespace SignalR.Chat.Server.Hubs
         //     await Clients.All.SendAsync("ReceiveMessage", device, data);
         //     Console.WriteLine($"ConnectionId: {Context.ConnectionId} - Mensagem: {data}");
         // }
-
+        private string hostName = Dns.GetHostName();
         private static readonly ConcurrentDictionary<string, string> UserConnectionMap = new ConcurrentDictionary<string, string>();
 
         public override Task OnConnectedAsync()
@@ -31,7 +32,7 @@ namespace SignalR.Chat.Server.Hubs
         
         public async Task BroadcastMessage(string message)
         {
-            await Clients.All.SendAsync("ReceiveBroadcastMessage", Context.ConnectionId, message);
+            await Clients.All.SendAsync("ReceiveBroadcastMessage", hostName, Context.ConnectionId, message);
             Console.WriteLine($"Mensagem de {Context.ConnectionId}: {message}");
         }
         
