@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SignalR.Chat.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c73e6d77e12c937eb109c74f2afb658f95415d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af610f2e82e1f534ff7762a2ee2d87e201ea2944")]
 [assembly: System.Reflection.AssemblyProductAttribute("SignalR.Chat.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SignalR.Chat.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

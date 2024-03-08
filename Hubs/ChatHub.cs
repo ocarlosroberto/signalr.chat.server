@@ -21,7 +21,7 @@ namespace SignalR.Chat.Server.Hubs
             Console.WriteLine($"Usuário conectado: {username} - ConnectionId: {Context.ConnectionId}");
             return base.OnConnectedAsync();
         }
-        
+
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
             string username = UserConnectionMap.FirstOrDefault(x => x.Value == Context.ConnectionId).Key;
@@ -29,13 +29,18 @@ namespace SignalR.Chat.Server.Hubs
             Console.WriteLine($"Usuário desconectado: {username} - ConnectionId: {Context.ConnectionId}");
             await base.OnDisconnectedAsync(exception);
         }
-        
+
+        public async Task GetHostName()
+        {
+            await Clients.Client(Context.ConnectionId).SendAsync("ReturnHostName", hostName);
+        }
+
         public async Task BroadcastMessage(string message)
         {
             await Clients.All.SendAsync("ReceiveBroadcastMessage", hostName, Context.ConnectionId, message);
             Console.WriteLine($"Mensagem de {Context.ConnectionId}: {message}");
         }
-        
+
         public async Task EnviarComandoParaperiferico(string nomePeriferico, string comando)
         {
             string connectionId = UserConnectionMap.FirstOrDefault(x => x.Key == nomePeriferico).Value;
@@ -47,7 +52,7 @@ namespace SignalR.Chat.Server.Hubs
             else
                 await Clients.Caller.SendAsync("ReceberRetorno", $"Periférico (nomePerlferico] não encontrado!");
         }
-        
+
         public async Task EnviarRetornoParaTela(string retorno, string connectionId)
         {
             await Clients.Client(connectionId).SendAsync("ReceberRetorno", retorno);
